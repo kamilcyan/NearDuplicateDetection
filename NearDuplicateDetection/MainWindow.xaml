@@ -12,18 +12,20 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>
-            <ColumnDefinition Width="500"></ColumnDefinition>
-            <ColumnDefinition Width="500"></ColumnDefinition>
+            <ColumnDefinition Width="400"></ColumnDefinition>
+            <ColumnDefinition Width="400"></ColumnDefinition>
+            <ColumnDefinition Width="400"></ColumnDefinition>
             <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"></RowDefinition>
-            <RowDefinition Height="500"></RowDefinition>
+            <RowDefinition Height="400"></RowDefinition>
+            <RowDefinition Height="400"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <StackPanel x:Name="ResultPanel" Orientation="Vertical" Grid.Column="2" Grid.Row="2">
+        <StackPanel x:Name="ResultPanel" Orientation="Vertical" Grid.Column="1" Grid.Row="3">
             <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Left">
                 <TextBlock x:Name="ResultList"/>
             </StackPanel>
@@ -32,20 +34,54 @@
             </StackPanel>    
         </StackPanel>
 
-        <StackPanel VerticalAlignment="Center" x:Name="LoadedImagePanel" Grid.Column="1" Grid.Row="1" Opacity="1">
+        <StackPanel x:Name="ResultPanelLsh" Orientation="Vertical" Grid.Column="2" Grid.Row="3">
+            <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBlock x:Name="ResultListLsh"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock x:Name="TimeElapsedMeasureLsh"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel x:Name="ResultPanelKnn" Orientation="Vertical" Grid.Column="3" Grid.Row="3">
+            <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBlock x:Name="ResultListKnn"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock x:Name="TimeElapsedMeasureKnn"/>
+            </StackPanel>
+        </StackPanel>
+        
+        
+
+
+
+        <StackPanel VerticalAlignment="Center" Margin="20" x:Name="LoadedImagePanel" Grid.Column="1" Grid.Row="1" Opacity="1">
             <!--<Image Opacity="1"  x:Name="loadedImage"  Stretch="Uniform" />-->
         </StackPanel>
 
-        <StackPanel VerticalAlignment="Center" x:Name="ComparedImagePanel" Grid.Column="2" Grid.Row="1">
+        <StackPanel VerticalAlignment="Center" Margin="20" x:Name="ComparedImagePanel" Grid.Column="1" Grid.Row="2">
             <!--<Image Opacity="1"  x:Name="comparedImage"/>-->
         </StackPanel>
         
-        <StackPanel Orientation="Horizontal" x:Name="InterestPointsPanel" Grid.Column="1" Grid.Row="2">
-            
+        <StackPanel VerticalAlignment="Center" Margin="20" x:Name="LoadedImagePanelLsh" Grid.Column="2" Grid.Row="1" Opacity="1">
+            <!--<Image Opacity="1"  x:Name="loadedImage"  Stretch="Uniform" />-->
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center" Margin="20" x:Name="ComparedImagePanelLsh" Grid.Column="2" Grid.Row="2">
             <!--<Image Opacity="1"  x:Name="comparedImage"/>-->
         </StackPanel>
 
-        <StackPanel HorizontalAlignment="Left" Orientation="Vertical" x:Name="ButtonsPanel" Grid.Column="1" Grid.Row="2">
+        <StackPanel VerticalAlignment="Center" Margin="20" x:Name="LoadedImagePanelKnn" Grid.Column="3" Grid.Row="1" Opacity="1">
+            <!--<Image Opacity="1"  x:Name="loadedImage"  Stretch="Uniform" />-->
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center" Margin="20" x:Name="ComparedImagePanelKnn" Grid.Column="3" Grid.Row="2">
+            <!--<Image Opacity="1"  x:Name="comparedImage"/>-->
+        </StackPanel>
+
+
+        <StackPanel HorizontalAlignment="Left" Orientation="Vertical" x:Name="ButtonsPanel" Grid.Column="1" Grid.Row="0">
             <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Left">
                 <!--<Label Height="30" Width="150" Content="Number of Interest Points: "/>
                 <TextBox x:Name="IPText" Height="20" Width="100">50</TextBox>-->
@@ -55,53 +91,51 @@
             </StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Left">
 
-                <Button x:Name="btnLoadFirst" Click="LoadFirst" Grid.Column="1" Grid.Row="2" Margin="10"  Height="35" Width="100">Load image</Button>
-                <Button x:Name="btnAll" Click="All" Grid.Column="1" Grid.Row="2" Margin="10"  Height="35" Width="100">All</Button>
-                <Button x:Name="btnHash" Click="GetHash" Grid.Column="1" Grid.Row="2" Margin="10"  Height="35" Width="100">Get Hash</Button>
+                <Button x:Name="btnLoadFirst" Click="LoadFirstAverage"  Margin="10"  Height="35" Width="100">Load image Average</Button>
+                <Button x:Name="btnAll" Click="AllAverage" Margin="10"  Height="35" Width="100">Search Average</Button>
+                <!--<Button x:Name="btnHash" Click="GetHash" Grid.Column="1" Grid.Row="2" Margin="10"  Height="35" Width="100">Get Hash</Button>-->
 
             </StackPanel>
         </StackPanel>
+        
+        <StackPanel HorizontalAlignment="Left" Orientation="Vertical" x:Name="ButtonsPanelLsh" Grid.Column="2" Grid.Row="0">
+            <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Left">
+                <!--<Label Height="30" Width="150" Content="Number of Interest Points: "/>
+                <TextBox x:Name="IPText" Height="20" Width="100">50</TextBox>-->
+                <CheckBox VerticalAlignment="Center" Content="Eliminate name duplicate" x:Name="isNameDuplicateLsh" Margin="20, 0,0,0" />
+                <CheckBox VerticalAlignment="Center" Content="Gaussian Blur" x:Name="isGaussLsh" Margin="20, 0,0,0" />
+
+            </StackPanel>
+            <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Left">
+
+                <Button x:Name="btnLoadFirstLsh" Click="LoadFirstLsh"  Margin="10"  Height="35" Width="100">Load image Average</Button>
+                <Button x:Name="btnAllLsh" Click="AllLsh" Margin="10"  Height="35" Width="100">Search Lsh</Button>
+                <!--<Button x:Name="btnHash" Click="GetHash" Grid.Column="1" Grid.Row="2" Margin="10"  Height="35" Width="100">Get Hash</Button>-->
+
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Left" Orientation="Vertical" x:Name="ButtonsPanelKnn" Grid.Column="3" Grid.Row="0">
+            <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Left">
+                <!--<Label Height="30" Width="150" Content="Number of Interest Points: "/>
+                <TextBox x:Name="IPText" Height="20" Width="100">50</TextBox>-->
+                <CheckBox VerticalAlignment="Center" Content="Eliminate name duplicate" x:Name="isNameDuplicateKnn" Margin="20, 0,0,0" />
+                <CheckBox VerticalAlignment="Center" Content="Gaussian Blur" x:Name="isGaussKnn" Margin="20, 0,0,0" />
+
+            </StackPanel>
+            <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Left">
+
+                <Button x:Name="btnLoadFirstKnn" Click="LoadFirstKnn"  Margin="10"  Height="35" Width="100">Load image KNN</Button>
+                <Button x:Name="btnAllKnn" Click="AllKnn" Margin="10"  Height="35" Width="100">Search KNN</Button>
+                <!--<Button x:Name="btnHash" Click="GetHash" Grid.Column="1" Grid.Row="2" Margin="10"  Height="35" Width="100">Get Hash</Button>-->
+
+            </StackPanel>
+        </StackPanel>
+
 
         <StackPanel HorizontalAlignment="Left" Orientation="Vertical" x:Name="HashesPanel" Grid.Column="0" Grid.Row="2">
             <TextBlock x:Name="HashList"/>
         </StackPanel>
 
-        <!--<Image Grid.Column="1" Grid.Row="1"  Opacity="0.5" x:Name="loadedImage2" Stretch="Uniform" Source="images/par2.jpg" />-->
-        <Canvas x:Name="BackgroundCanvas" Opacity="0" Grid.Column="1" Grid.Row="1"  >
-            <Canvas.Background>
-                <DrawingBrush TileMode="Tile" Viewport="-10,-10,4,4" 
-                                     ViewportUnits="Absolute">
-                    <DrawingBrush.Drawing>
-                        <GeometryDrawing >
-                            <GeometryDrawing.Geometry>
-                                <RectangleGeometry Rect="0,0,50,50"/>
-                            </GeometryDrawing.Geometry>
-                            <GeometryDrawing.Pen >
-                                <Pen Brush="Gray" Thickness="1"/>
-                            </GeometryDrawing.Pen>
-                        </GeometryDrawing>
-                    </DrawingBrush.Drawing>
-                </DrawingBrush>
-            </Canvas.Background>
-        </Canvas>
-        <Canvas x:Name="BackgroundCanvas2" Opacity="0" Grid.Column="2" Grid.Row="1"  >
-            <Canvas.Background>
-                <DrawingBrush TileMode="Tile" Viewport="-10,-10,4,4" 
-                                     ViewportUnits="Absolute">
-                    <DrawingBrush.Drawing>
-                        <GeometryDrawing >
-                            <GeometryDrawing.Geometry>
-                                <RectangleGeometry Rect="0,0,50,50"/>
-                            </GeometryDrawing.Geometry>
-                            <GeometryDrawing.Pen >
-                                <Pen Brush="Gray" Thickness="1"/>
-                            </GeometryDrawing.Pen>
-                        </GeometryDrawing>
-                    </DrawingBrush.Drawing>
-                </DrawingBrush>
-            </Canvas.Background>
-        </Canvas>
-        <Rectangle x:Name="MarkingZone" Opacity="0" Grid.Column="1" Grid.Row="1" Width = "250" Height = "250" Stroke = "Blue" StrokeThickness = "2" Fill="Yellow" />
-        <Rectangle x:Name="MarkingZone2" Opacity="0" Grid.Column="2" Grid.Row="1" Width = "250" Height = "250" Stroke = "Blue" StrokeThickness = "2" Fill="Yellow" />
-    </Grid>
+     </Grid>
 </Window>

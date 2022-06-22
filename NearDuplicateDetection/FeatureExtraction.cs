@@ -48,6 +48,7 @@ namespace NearDuplicateDetection
 
             var result = new ConcurrentDictionary<string, List<(string otherFile, double match)>>();
 
+            var reducedHash = ComparisonExtensions.Reduce(hashes);
             result = CalculateMatchRate(source, fileList, hashes, result, nameDuplicat);
 
             results = WriteResult(result);
