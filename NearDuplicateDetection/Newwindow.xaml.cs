@@ -32,7 +32,7 @@ namespace NearDuplicateDetection
                 ResultList2.Text += r;
             }
             //int iter = 1;
-            //foreach(var p in points)
+            //foreach (var p in points)
             //{
             //    ResultList2.Text += "System.Drawing.Point p" + iter + " = new System.Drawing.Point();\n";
             //    ResultList2.Text += "p" + iter + ".X = " + p.X + ";\n";
@@ -41,10 +41,10 @@ namespace NearDuplicateDetection
             //    iter++;
             //}
 
-            foreach (var r in results2)
-            {
-                ResultList2.Text += r;
-            }
+            //foreach (var r in results2)
+            //{
+            //    ResultList2.Text += r;
+            //}
         }
     }
 }

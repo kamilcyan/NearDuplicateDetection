@@ -164,7 +164,7 @@ namespace NearDuplicateDetection
             if (goClick)
             {
 
-                int numberOfPoints = 50;
+                //int numberOfPoints = 128;
                 int numberOfObjects = ComparedImagePanel.Children.Count;
                 if (numberOfObjects > 0)
                 {
@@ -184,7 +184,7 @@ namespace NearDuplicateDetection
                 _ = dialog.ShowDialog();
 
 
-                points = featureExtraction.SetInterestPoints(numberOfPoints);
+                //points = featureExtraction.SetInterestPoints(numberOfPoints);
                 bool nameDuplicate = isNameDuplicate.IsChecked == true ? true : false;
                 bool gaussianBlur = isGauss.IsChecked == true ? true : false;
 
@@ -214,8 +214,8 @@ namespace NearDuplicateDetection
                 var right = bestMatch.Value.OrderBy(x => x.match).Last();
 
                 comparedImage.Source = new BitmapImage(new Uri(right.otherFile));
-                comparedImage.Height = 400;
-                comparedImage.Width = 400;
+                comparedImage.Height = 350;
+                comparedImage.Width = 350;
                 ComparedImagePanel.Children.Add(comparedImage);
 
                 FillResultList(comparedImage.Source.ToString(), /*stopwatch.ElapsedMilliseconds.ToString()*/ ts.TotalMilliseconds + " milisec");
@@ -239,11 +239,11 @@ namespace NearDuplicateDetection
                 isHeightGreater = featureExtraction.IsHeightGreater(substrings);
                 if (isHeightGreater)
                 {
-                    loadedImage.Height = 400;
+                    loadedImage.Height = 350;
                 }
                 else
                 {
-                    loadedImage.Width = 400;
+                    loadedImage.Width = 350;
                 }
                 if (ResultList.Text != "")
                 {
@@ -281,11 +281,11 @@ namespace NearDuplicateDetection
                 isHeightGreater = featureExtraction.IsHeightGreater(substrings);
                 if (isHeightGreater)
                 {
-                    loadedImageLsh.Height = 400;
+                    loadedImageLsh.Height = 350;
                 }
                 else
                 {
-                    loadedImageLsh.Width = 400;
+                    loadedImageLsh.Width = 350;
                 }
                 if (ResultListLsh.Text != "")
                 {
@@ -323,11 +323,11 @@ namespace NearDuplicateDetection
                 isHeightGreater = featureExtraction.IsHeightGreater(substrings);
                 if (isHeightGreater)
                 {
-                    loadedImageKnn.Height = 400;
+                    loadedImageKnn.Height = 350;
                 }
                 else
                 {
-                    loadedImageKnn.Width = 400;
+                    loadedImageKnn.Width = 350;
                 }
                 if (ResultListKnn.Text != "")
                 {
@@ -474,8 +474,8 @@ namespace NearDuplicateDetection
                 var right = bestMatch.Value.OrderBy(x => x.match).Last();
 
                 comparedImageKnn.Source = new BitmapImage(new Uri(right.otherFile));
-                comparedImageKnn.Height = 400;
-                comparedImageKnn.Width = 400;
+                comparedImageKnn.Height = 350;
+                comparedImageKnn.Width = 350;
                 ComparedImagePanelKnn.Children.Add(comparedImageKnn);
 
                 FillResultList(comparedImageKnn.Source.ToString(), /*stopwatch.ElapsedMilliseconds.ToString()*/ ts.TotalMilliseconds + " milisec");

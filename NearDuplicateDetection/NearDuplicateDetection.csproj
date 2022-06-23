@@ -99,7 +99,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AverageHash.cs" />
     <Compile Include="ComparisionExtension.cs" />
     <Compile Include="ConvolutionMatrix.cs" />
     <Compile Include="HashFunctions\AverageHash.cs" />
@@ -109,9 +108,6 @@
       <DependentUpon>Newwindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Point.cs" />
-    <Compile Include="SubWindow.xaml.cs">
-      <DependentUpon>SubWindow.xaml</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -128,9 +124,6 @@
     <Page Include="Newwindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="SubWindow.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

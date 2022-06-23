@@ -12,16 +12,17 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>
-            <ColumnDefinition Width="400"></ColumnDefinition>
-            <ColumnDefinition Width="400"></ColumnDefinition>
-            <ColumnDefinition Width="400"></ColumnDefinition>
+            <ColumnDefinition Width="350"></ColumnDefinition>
+            <ColumnDefinition Width="350"></ColumnDefinition>
+            <ColumnDefinition Width="350"></ColumnDefinition>
+            <ColumnDefinition Width="350"></ColumnDefinition>
             <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"></RowDefinition>
-            <RowDefinition Height="400"></RowDefinition>
-            <RowDefinition Height="400"></RowDefinition>
+            <RowDefinition Height="350"></RowDefinition>
+            <RowDefinition Height="350"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
 
@@ -51,48 +52,54 @@
                 <TextBlock x:Name="TimeElapsedMeasureKnn"/>
             </StackPanel>
         </StackPanel>
-        
-        
 
 
 
-        <StackPanel VerticalAlignment="Center" Margin="20" x:Name="LoadedImagePanel" Grid.Column="1" Grid.Row="1" Opacity="1">
-            <!--<Image Opacity="1"  x:Name="loadedImage"  Stretch="Uniform" />-->
-        </StackPanel>
 
-        <StackPanel VerticalAlignment="Center" Margin="20" x:Name="ComparedImagePanel" Grid.Column="1" Grid.Row="2">
-            <!--<Image Opacity="1"  x:Name="comparedImage"/>-->
-        </StackPanel>
-        
-        <StackPanel VerticalAlignment="Center" Margin="20" x:Name="LoadedImagePanelLsh" Grid.Column="2" Grid.Row="1" Opacity="1">
-            <!--<Image Opacity="1"  x:Name="loadedImage"  Stretch="Uniform" />-->
-        </StackPanel>
-
-        <StackPanel VerticalAlignment="Center" Margin="20" x:Name="ComparedImagePanelLsh" Grid.Column="2" Grid.Row="2">
-            <!--<Image Opacity="1"  x:Name="comparedImage"/>-->
-        </StackPanel>
-
-        <StackPanel VerticalAlignment="Center" Margin="20" x:Name="LoadedImagePanelKnn" Grid.Column="3" Grid.Row="1" Opacity="1">
-            <!--<Image Opacity="1"  x:Name="loadedImage"  Stretch="Uniform" />-->
-        </StackPanel>
-
-        <StackPanel VerticalAlignment="Center" Margin="20" x:Name="ComparedImagePanelKnn" Grid.Column="3" Grid.Row="2">
-            <!--<Image Opacity="1"  x:Name="comparedImage"/>-->
-        </StackPanel>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Column="1" Grid.Row="1" Background="AliceBlue" >
+            <StackPanel VerticalAlignment="Center" Margin="20" x:Name="LoadedImagePanel" Grid.Column="1" Grid.Row="1" >
+                 <!--<Image Opacity="1"  x:Name="loadedImage"  Stretch="Uniform" />-->
+            </StackPanel>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Column="1" Grid.Row="2" Background="AntiqueWhite">
+            <StackPanel VerticalAlignment="Center" Margin="20" x:Name="ComparedImagePanel" Grid.Column="1" Grid.Row="2">
+                <!--<Image Opacity="1"  x:Name="comparedImage"/>-->
+            </StackPanel>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Column="2" Grid.Row="1" Background="AliceBlue">
+            <StackPanel VerticalAlignment="Center" Margin="20" x:Name="LoadedImagePanelLsh" Grid.Column="2" Grid.Row="1" Opacity="1">
+                <!--<Image Opacity="1"  x:Name="loadedImage"  Stretch="Uniform" />-->
+            </StackPanel>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Column="2" Grid.Row="2" Background="AntiqueWhite">
+            <StackPanel VerticalAlignment="Center" Margin="20" x:Name="ComparedImagePanelLsh" Grid.Column="2" Grid.Row="2">
+                <!--<Image Opacity="1"  x:Name="comparedImage"/>-->
+            </StackPanel>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Column="3" Grid.Row="1" Background="AliceBlue" >
+            <StackPanel VerticalAlignment="Center" Margin="20" x:Name="LoadedImagePanelKnn" Grid.Column="3" Grid.Row="1" Opacity="1">
+                <!--<Image Opacity="1"  x:Name="loadedImage"  Stretch="Uniform" />-->
+            </StackPanel>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Column="3" Grid.Row="2" Background="AntiqueWhite">
+            <StackPanel VerticalAlignment="Center" Margin="20" x:Name="ComparedImagePanelKnn" Grid.Column="3" Grid.Row="2">
+                <!--<Image Opacity="1"  x:Name="comparedImage"/>-->
+            </StackPanel>
+        </Border>
 
 
         <StackPanel HorizontalAlignment="Left" Orientation="Vertical" x:Name="ButtonsPanel" Grid.Column="1" Grid.Row="0">
             <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Left">
                 <!--<Label Height="30" Width="150" Content="Number of Interest Points: "/>
                 <TextBox x:Name="IPText" Height="20" Width="100">50</TextBox>-->
-                <CheckBox VerticalAlignment="Center" Content="Eliminate name duplicate" x:Name="isNameDuplicate" Margin="20, 0,0,0" />
+                <CheckBox VerticalAlignment="Center" Content="Eliminate name duplicate" x:Name="isNameDuplicate" Margin="0, 0,0,0" />
                 <CheckBox VerticalAlignment="Center" Content="Gaussian Blur" x:Name="isGauss" Margin="20, 0,0,0" />
 
             </StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Left">
 
-                <Button x:Name="btnLoadFirst" Click="LoadFirstAverage"  Margin="10"  Height="35" Width="100">Load image Average</Button>
-                <Button x:Name="btnAll" Click="AllAverage" Margin="10"  Height="35" Width="100">Search Average</Button>
+                <Button x:Name="btnLoadFirst" Click="LoadFirstAverage"  Margin="10"  Height="20" Width="100">Load image Average</Button>
+                <Button x:Name="btnAll" Click="AllAverage" Margin="10"  Height="20" Width="100">Search Average</Button>
                 <!--<Button x:Name="btnHash" Click="GetHash" Grid.Column="1" Grid.Row="2" Margin="10"  Height="35" Width="100">Get Hash</Button>-->
 
             </StackPanel>
@@ -102,14 +109,14 @@
             <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Left">
                 <!--<Label Height="30" Width="150" Content="Number of Interest Points: "/>
                 <TextBox x:Name="IPText" Height="20" Width="100">50</TextBox>-->
-                <CheckBox VerticalAlignment="Center" Content="Eliminate name duplicate" x:Name="isNameDuplicateLsh" Margin="20, 0,0,0" />
+                <CheckBox VerticalAlignment="Center" Content="Eliminate name duplicate" x:Name="isNameDuplicateLsh" Margin="0, 0,0,0" />
                 <CheckBox VerticalAlignment="Center" Content="Gaussian Blur" x:Name="isGaussLsh" Margin="20, 0,0,0" />
 
             </StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Left">
 
-                <Button x:Name="btnLoadFirstLsh" Click="LoadFirstLsh"  Margin="10"  Height="35" Width="100">Load image Average</Button>
-                <Button x:Name="btnAllLsh" Click="AllLsh" Margin="10"  Height="35" Width="100">Search Lsh</Button>
+                <Button x:Name="btnLoadFirstLsh" Click="LoadFirstLsh"  Margin="10"  Height="20" Width="100">Load image Lsh</Button>
+                <Button x:Name="btnAllLsh" Click="AllLsh" Margin="10"  Height="20" Width="100">Search Lsh</Button>
                 <!--<Button x:Name="btnHash" Click="GetHash" Grid.Column="1" Grid.Row="2" Margin="10"  Height="35" Width="100">Get Hash</Button>-->
 
             </StackPanel>
@@ -119,14 +126,14 @@
             <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Left">
                 <!--<Label Height="30" Width="150" Content="Number of Interest Points: "/>
                 <TextBox x:Name="IPText" Height="20" Width="100">50</TextBox>-->
-                <CheckBox VerticalAlignment="Center" Content="Eliminate name duplicate" x:Name="isNameDuplicateKnn" Margin="20, 0,0,0" />
+                <CheckBox VerticalAlignment="Center" Content="Eliminate name duplicate" x:Name="isNameDuplicateKnn" Margin="0, 0,0,0" />
                 <CheckBox VerticalAlignment="Center" Content="Gaussian Blur" x:Name="isGaussKnn" Margin="20, 0,0,0" />
 
             </StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Left">
 
-                <Button x:Name="btnLoadFirstKnn" Click="LoadFirstKnn"  Margin="10"  Height="35" Width="100">Load image KNN</Button>
-                <Button x:Name="btnAllKnn" Click="AllKnn" Margin="10"  Height="35" Width="100">Search KNN</Button>
+                <Button x:Name="btnLoadFirstKnn" Click="LoadFirstKnn"  Margin="10"  Height="20" Width="100">Load image KNN</Button>
+                <Button x:Name="btnAllKnn" Click="AllKnn" Margin="10"  Height="20" Width="100">Search KNN</Button>
                 <!--<Button x:Name="btnHash" Click="GetHash" Grid.Column="1" Grid.Row="2" Margin="10"  Height="35" Width="100">Get Hash</Button>-->
 
             </StackPanel>
