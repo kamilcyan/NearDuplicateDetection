@@ -103,7 +103,7 @@
     <Compile Include="ConvolutionMatrix.cs" />
     <Compile Include="HashFunctions\AverageHash.cs" />
     <Compile Include="Models\Bin.cs" />
-    <Compile Include="Models\ClassContainer.cs" />
+    <Compile Include="Models\BinContainer.cs" />
     <Compile Include="Newwindow.xaml.cs">
       <DependentUpon>Newwindow.xaml</DependentUpon>
     </Compile>

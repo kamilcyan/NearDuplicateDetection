@@ -61,7 +61,7 @@
                  <!--<Image Opacity="1"  x:Name="loadedImage"  Stretch="Uniform" />-->
             </StackPanel>
         </Border>
-        <Border BorderThickness="1" BorderBrush="Black" Grid.Column="1" Grid.Row="2" Background="AntiqueWhite">
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Column="1" Grid.Row="2" Background="AliceBlue">
             <StackPanel VerticalAlignment="Center" Margin="20" x:Name="ComparedImagePanel" Grid.Column="1" Grid.Row="2">
                 <!--<Image Opacity="1"  x:Name="comparedImage"/>-->
             </StackPanel>
@@ -71,7 +71,7 @@
                 <!--<Image Opacity="1"  x:Name="loadedImage"  Stretch="Uniform" />-->
             </StackPanel>
         </Border>
-        <Border BorderThickness="1" BorderBrush="Black" Grid.Column="2" Grid.Row="2" Background="AntiqueWhite">
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Column="2" Grid.Row="2" Background="AliceBlue">
             <StackPanel VerticalAlignment="Center" Margin="20" x:Name="ComparedImagePanelLsh" Grid.Column="2" Grid.Row="2">
                 <!--<Image Opacity="1"  x:Name="comparedImage"/>-->
             </StackPanel>
@@ -81,7 +81,7 @@
                 <!--<Image Opacity="1"  x:Name="loadedImage"  Stretch="Uniform" />-->
             </StackPanel>
         </Border>
-        <Border BorderThickness="1" BorderBrush="Black" Grid.Column="3" Grid.Row="2" Background="AntiqueWhite">
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Column="3" Grid.Row="2" Background="AliceBlue">
             <StackPanel VerticalAlignment="Center" Margin="20" x:Name="ComparedImagePanelKnn" Grid.Column="3" Grid.Row="2">
                 <!--<Image Opacity="1"  x:Name="comparedImage"/>-->
             </StackPanel>
